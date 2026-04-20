@@ -10,8 +10,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: 'Mills Publishing Platform',
-    description: 'Publishing and digital media platform serving 8+ Utah arts organizations including Utah Symphony, Utah Opera, and Utah Arts Festival.',
-    tags: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
+    description: 'JAMstack publishing platform serving 8+ Utah arts organizations. Built with React and Gatsby, with automated Git-based deployment pipelines pushing to a cloud web server on every merge.',
+    tags: ['React', 'Gatsby', 'JavaScript', 'CSS'],
     url: 'https://millspub.com',
     repo: null,
     featured: true,
@@ -50,16 +50,16 @@ export const projects: Project[] = [
   },
   {
     title: 'DVMF',
-    description: 'Digital platform for the Deer Valley Music Festival — event-driven content and publication workflows.',
-    tags: ['WordPress', 'HTML', 'CSS', 'JavaScript'],
+    description: 'Event-driven site for the Deer Valley Music Festival built with Gatsby, React, and MDX. Deployed via automated Git workflows to a cloud web server.',
+    tags: ['Gatsby', 'React', 'MDX', 'JAMstack'],
     url: 'https://dvmf.millspub.com',
     repo: null,
     featured: false,
   },
   {
     title: 'Ballet West',
-    description: 'Digital presence for Ballet West company, part of the Mills Publishing network of arts organization sites.',
-    tags: ['WordPress', 'HTML', 'CSS'],
+    description: 'Digital presence for Ballet West built with Gatsby, React, and MDX — part of the Mills Publishing network with shared Git-based deployment to a cloud web server.',
+    tags: ['Gatsby', 'React', 'MDX', 'JAMstack'],
     url: 'https://balletwest.millspub.com',
     repo: null,
     featured: false,
