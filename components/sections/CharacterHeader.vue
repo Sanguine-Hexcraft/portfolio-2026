@@ -1,3 +1,26 @@
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const dots = ref(0)
+const showCursor = ref(true)
+let dotsTimer: ReturnType<typeof setInterval>
+let cursorTimer: ReturnType<typeof setInterval>
+
+onMounted(() => {
+  dotsTimer = setInterval(() => {
+    dots.value = (dots.value + 1) % 4
+  }, 500)
+  cursorTimer = setInterval(() => {
+    showCursor.value = !showCursor.value
+  }, 530)
+})
+
+onUnmounted(() => {
+  clearInterval(dotsTimer)
+  clearInterval(cursorTimer)
+})
+</script>
+
 <template>
   <header class="pt-28 pb-16 border-b border-grid">
     <div class="max-w-5xl mx-auto px-6">
@@ -5,7 +28,9 @@
 
         <!-- Identity -->
         <div class="md:col-span-2">
-          <p class="font-mono text-xs text-cyber tracking-widest mb-3">INITIALIZING PROFILE...</p>
+          <p class="font-mono text-xs text-cyber tracking-widest mb-3">
+            INITIALIZING PROFILE<span class="inline-block w-6 text-left">{{ '.'.repeat(dots) }}</span><span :class="showCursor ? 'opacity-100' : 'opacity-0'" class="relative -top-[2px] transition-opacity duration-75">▋</span>
+          </p>
           <h1 class="font-serif text-6xl sm:text-7xl font-normal text-ink leading-none tracking-tight mb-6">
             Patrick<br />Witmer
           </h1>
