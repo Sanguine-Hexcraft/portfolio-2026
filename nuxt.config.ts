@@ -9,13 +9,14 @@ export default defineNuxtConfig({
     preset: 'github-pages',
   },
   app: {
+    baseURL: '/portfolio-2026/',
     head: {
       title: 'Portfolio',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Personal portfolio — experience, projects, and interests.' },
       ],
-      htmlAttrs: {},
+      htmlAttrs: { class: 'dark' },
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
