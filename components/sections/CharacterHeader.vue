@@ -35,7 +35,7 @@ onUnmounted(() => {
             Patrick<br />Witmer
           </h1>
           <p class="text-ink-muted text-lg leading-relaxed max-w-lg">
-            Full-stack web developer with 20+ years shipping production sites. Strong in JavaScript, WordPress, and front-end systems — actively deepening backend skills in Python and Linux.
+            Full-stack developer with 20+ years building and maintaining production systems. Strong front-end instincts informed by a design foundation — deepening backend skills in Python, Linux, and APIs.
           </p>
         </div>
 
@@ -49,12 +49,12 @@ onUnmounted(() => {
           <div class="h-px bg-grid" />
           <div class="flex justify-between text-ink-muted">
             <span>LEVEL</span>
-            <span class="text-ink">Senior · 20+ YRS</span>
+            <span class="text-ink">20+ YRS</span>
           </div>
           <div class="h-px bg-grid" />
           <div class="flex justify-between text-ink-muted">
             <span>STATUS</span>
-            <span class="text-gold">AVAILABLE</span>
+            <span class="text-green-400">AVAILABLE</span>
           </div>
           <div class="h-px bg-grid" />
           <div class="flex justify-between text-ink-muted">
@@ -64,7 +64,7 @@ onUnmounted(() => {
           <div class="h-px bg-grid" />
           <div class="flex justify-between text-ink-muted">
             <span>SPEC</span>
-            <span class="text-ink">Web · Design · Python</span>
+            <span class="text-ink">Dev · Design · Python</span>
           </div>
         </div>
 

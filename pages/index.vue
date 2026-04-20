@@ -7,7 +7,6 @@
       <ExperienceSection />
       <ProjectsSection />
       <SkillsSection />
-      <InterestsSection />
     </main>
     <Footer />
   </div>
