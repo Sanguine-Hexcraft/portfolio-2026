@@ -31,9 +31,12 @@ onUnmounted(() => {
           <p class="font-mono text-xs text-cyber tracking-widest mb-3">
             INITIALIZING PROFILE<span class="inline-block w-6 text-left">{{ '.'.repeat(dots) }}</span><span :class="showCursor ? 'opacity-100' : 'opacity-0'" class="relative -top-[2px] transition-opacity duration-75">▋</span>
           </p>
-          <h1 class="font-serif text-6xl sm:text-7xl font-normal text-ink leading-none tracking-tight mb-6">
-            Patrick<br />Witmer
-          </h1>
+          <div class="flex items-center gap-6 mb-6">
+            <img src="/images/me.png" alt="Patrick Witmer" class="w-36 h-36 object-cover border-2 border-grid" />
+            <h1 class="font-serif text-6xl sm:text-7xl font-normal text-ink leading-none tracking-tight">
+              Patrick<br />Witmer
+            </h1>
+          </div>
           <p class="text-ink-muted text-lg leading-relaxed max-w-lg">
             Full-stack developer with 20+ years building and maintaining production systems. Strong front-end instincts informed by a design foundation — deepening backend skills in Python, Linux, and APIs.
           </p>
