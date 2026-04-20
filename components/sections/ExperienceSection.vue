@@ -2,36 +2,54 @@
 import { experience } from '~/content/experience'
 
 function formatDate(date: string | null): string {
-  if (!date) return 'Present'
+  if (!date) return 'PRESENT'
   const [year, month] = date.split('-')
-  return new Date(Number(year), Number(month) - 1).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })
+  return new Date(Number(year), Number(month) - 1)
+    .toLocaleDateString('en-US', { year: 'numeric', month: 'short' })
+    .toUpperCase()
 }
 </script>
 
 <template>
-  <section id="experience" class="py-24 border-t border-white/5">
+  <section id="experience" class="py-20 border-b border-grid">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-xs font-mono text-accent-light uppercase tracking-widest mb-12">Experience</h2>
-      <div class="relative pl-4 border-l border-white/10 space-y-12">
+      <SectionLabel label="EXPERIENCE" />
+      <div class="space-y-0">
         <div
-          v-for="entry in experience"
+          v-for="(entry, i) in experience"
           :key="`${entry.company}-${entry.startDate}`"
-          class="relative"
+          class="grid md:grid-cols-4 gap-6 py-8 border-b border-grid last:border-b-0"
         >
-          <div class="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-accent border-2 border-gray-950" />
-          <div class="ml-4">
-            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
-              <h3 class="text-white font-semibold text-lg">{{ entry.role }}</h3>
-              <span class="text-accent-light font-medium">{{ entry.company }}</span>
-              <span class="text-gray-500 text-sm ml-auto">{{ formatDate(entry.startDate) }} — {{ formatDate(entry.endDate) }}</span>
+          <!-- Date col -->
+          <div class="font-mono text-xs text-ink-faint space-y-1">
+            <div class="text-cyber">{{ String(i + 1).padStart(2, '0') }}</div>
+            <div>{{ formatDate(entry.startDate) }}</div>
+            <div>→ {{ formatDate(entry.endDate) }}</div>
+            <div class="mt-2 text-ink-muted">{{ entry.location }}</div>
+          </div>
+
+          <!-- Content -->
+          <div class="md:col-span-3">
+            <div class="flex flex-wrap items-baseline gap-x-3 mb-2">
+              <h3 class="font-display font-semibold text-xl text-ink">{{ entry.role }}</h3>
+              <span class="font-mono text-xs text-cyber">// {{ entry.company }}</span>
             </div>
-            <p class="text-gray-400 text-sm mb-1">{{ entry.location }}</p>
-            <p class="text-gray-300 mb-3">{{ entry.description }}</p>
+            <p class="text-ink-muted text-sm leading-relaxed mb-4">{{ entry.description }}</p>
+            <ul class="space-y-1.5 mb-4">
+              <li
+                v-for="bullet in entry.bullets"
+                :key="bullet"
+                class="flex gap-2 text-sm text-ink-muted"
+              >
+                <span class="text-cyber mt-0.5 shrink-0">›</span>
+                <span>{{ bullet }}</span>
+              </li>
+            </ul>
             <div class="flex flex-wrap gap-2">
               <span
                 v-for="skill in entry.skills"
                 :key="skill"
-                class="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-gray-400"
+                class="font-mono text-xs px-2 py-0.5 border border-grid text-ink-faint bg-bg-surface"
               >{{ skill }}</span>
             </div>
           </div>

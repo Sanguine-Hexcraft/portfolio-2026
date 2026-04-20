@@ -2,10 +2,11 @@
   <div>
     <NavBar />
     <main>
-      <HeroSection />
+      <CharacterHeader />
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
+      <SkillsSection />
       <InterestsSection />
     </main>
     <Footer />

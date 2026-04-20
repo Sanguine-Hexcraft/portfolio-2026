@@ -1,0 +1,23 @@
+/* Light mode defaults */
+:root {
+  --bg-base: #f4f4f8;
+  --bg-surface: #ffffff;
+  --bg-raised: #ebebf2;
+  --ink: #111118;
+  --ink-muted: #4a4a6a;
+  --ink-faint: #9090a8;
+  --border-grid: rgba(0, 0, 0, 0.08);
+  --border-grid-bright: rgba(0, 0, 0, 0.14);
+}
+
+/* Dark mode overrides */
+.dark {
+  --bg-base: #0a0a0f;
+  --bg-surface: #111118;
+  --bg-raised: #16161f;
+  --ink: #e2e8f0;
+  --ink-muted: #8892a4;
+  --ink-faint: #4a4a6a;
+  --border-grid: rgba(255, 255, 255, 0.06);
+  --border-grid-bright: rgba(255, 255, 255, 0.12);
+}

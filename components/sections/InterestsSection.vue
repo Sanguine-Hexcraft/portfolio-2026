@@ -3,17 +3,17 @@ import { interests } from '~/content/interests'
 </script>
 
 <template>
-  <section id="interests" class="py-24 border-t border-white/5">
+  <section id="interests" class="py-20">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-xs font-mono text-accent-light uppercase tracking-widest mb-12">Interests</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+      <SectionLabel label="INTERESTS" />
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
         <div
           v-for="interest in interests"
           :key="interest.label"
-          class="flex flex-col items-center gap-3 p-5 rounded-xl bg-white/3 border border-white/8 hover:border-white/15 hover:bg-white/5 transition-all text-center"
+          class="flex flex-col items-center gap-2.5 p-4 border border-grid bg-bg-surface hover:border-cyber/30 hover:bg-bg-raised transition-colors group"
         >
-          <span class="text-3xl">{{ interest.emoji }}</span>
-          <span class="text-sm font-medium text-gray-300">{{ interest.label }}</span>
+          <span class="text-2xl">{{ interest.emoji }}</span>
+          <span class="font-mono text-xs text-ink-muted group-hover:text-cyber transition-colors tracking-wider text-center">{{ interest.label.toUpperCase() }}</span>
         </div>
       </div>
     </div>

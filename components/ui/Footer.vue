@@ -1,11 +1,11 @@
 <template>
-  <footer class="border-t border-white/5 py-8 mt-24">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-      <span>Built with Nuxt 3 + Tailwind CSS</span>
-      <div class="flex gap-5">
-        <a href="https://github.com/username" target="_blank" rel="noopener" class="hover:text-white transition-colors">GitHub</a>
-        <a href="https://linkedin.com/in/username" target="_blank" rel="noopener" class="hover:text-white transition-colors">LinkedIn</a>
-        <a href="mailto:your@email.com" class="hover:text-white transition-colors">Email</a>
+  <footer class="border-t border-grid mt-24 py-8">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <span class="font-mono text-xs text-ink-faint">// END OF FILE</span>
+      <div class="flex gap-6">
+        <a href="https://github.com/Sanguine-Hexcraft" target="_blank" rel="noopener" class="font-mono text-xs text-ink-muted hover:text-cyber transition-colors">GITHUB</a>
+        <a href="https://linkedin.com/in/patrick-witmer-5b836326" target="_blank" rel="noopener" class="font-mono text-xs text-ink-muted hover:text-cyber transition-colors">LINKEDIN</a>
+        <a href="mailto:Patrick.Witmer@proton.me" class="font-mono text-xs text-ink-muted hover:text-gold transition-colors">EMAIL</a>
       </div>
     </div>
   </footer>
