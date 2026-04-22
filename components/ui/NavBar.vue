@@ -12,7 +12,7 @@ const links = [
 <template>
   <nav class="fixed top-0 inset-x-0 z-50 bg-bg-base/90 backdrop-blur-sm border-b border-grid">
     <div class="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between">
-      <span class="font-mono text-xs text-cyber tracking-widest">~/portfolio</span>
+      <a href="#" class="font-mono text-xs text-cyber tracking-widest hover:opacity-75 transition-opacity">~/portfolio</a>
       <ul class="flex items-center gap-6">
         <li v-for="link in links" :key="link.href">
           <a
